@@ -1,0 +1,7 @@
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\bin\Debug\ClassLibrary1.dll
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\bin\Debug\ClassLibrary1.pdb
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\obj\Debug\BattleSystem.csprojResolveAssemblyReference.cache
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\obj\Debug\ClassLibrary1.dll
+C:\Users\George\Documents\Visual Studio 2015\Projects\RPG\BattleSystem\obj\Debug\ClassLibrary1.pdb

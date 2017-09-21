@@ -1,0 +1,7 @@
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\bin\Debug\Item.dll
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\bin\Debug\Item.pdb
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\obj\Debug\Items.csprojResolveAssemblyReference.cache
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\obj\Debug\Item.dll
+C:\Users\George\documents\visual studio 2015\Projects\RPG\Item\obj\Debug\Item.pdb
