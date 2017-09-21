@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Items
+{
+    public abstract class Item
+    {
+        public static string name;
+        public static string description;
+        public static char itemType;
+        public static int price;
+        //public static int currentDurability;
+        //public static int durability;
+        //public static int plusStr;
+        //public static int plusDex;
+        //public static int plusVitality;
+        //public static int plusSpeed;
+        //int plusHealth;
+        //int plusMana;
+        public abstract string GetName();
+        public abstract string GetDescription();
+        public abstract char GetItemType();
+        public abstract int GetPrice();     
+    }
+}
