@@ -12,6 +12,7 @@ namespace Character
     /// </summary>
     public class Character
     {
+        public string name { get; private set; }
         public int level { get; private set; }
         public int experience { get; private set; }
         public int strength { get; private set; }
@@ -31,6 +32,7 @@ namespace Character
         /// <summary>
         /// Constructor for character data. Requires any number of parameters from 0 to 9
         /// </summary>
+        /// <param name="nam">Character's Name</param>
         /// <param name="lvl">Level of character</param>
         /// <param name="exp">Experience value of character</param>
         /// <param name="str">Strength value of character</param>
@@ -40,8 +42,9 @@ namespace Character
         /// <param name="h">Health of character</param>
         /// <param name="m">Mana of Character</param>
         /// <param name="mag">Does character use magic or not</param>
-        public Character(int lvl = 1, int exp = 0, int str = 1, int dex = 1, int vit = 1, int spd = 1, int h = 1, int m = 0, bool mag = false)
+        public Character(string nam, int lvl = 1, int exp = 0, int str = 1, int dex = 1, int vit = 1, int spd = 1, int h = 1, int m = 0, bool mag = false)
         {
+            name = nam;
             level = lvl;
             experience = exp;
             strength = str;
@@ -54,7 +57,6 @@ namespace Character
             currentMana = m;
             isMagicUser = mag;           
         }
-
 
         /// <summary>
         /// Checks to see if character is currently alive

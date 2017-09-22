@@ -17,7 +17,7 @@ namespace Character
         [TestMethod]
         public void IsCharacterAliveTest()
         {
-            Character c1 = new Character(1, 0, 2, 1, 1, 2, 4, 0, false);
+            Character c1 = new Character("Player 1", 1, 0, 2, 1, 1, 2, 4, 0, false);
             Assert.IsTrue(c1.IsCharacterAlive());    
         }
 
@@ -28,7 +28,7 @@ namespace Character
         [TestMethod]
         public void IsCharacterDeadTest()
         {
-            Character c1 = new Character(1, 0, 2, 1, 1, 2, 0, 0, false);
+            Character c1 = new Character("Player 1", 1, 0, 2, 1, 1, 2, 0, 0, false);
             Assert.IsFalse(c1.IsCharacterAlive());
         }
 
@@ -40,7 +40,7 @@ namespace Character
         public void LevelUpNoLevelingHealthGainTest()
         {
             Random r = new Random();
-            Character c1 = new Character(1, 0, 1, 1, 1, 1, 1, 0, false);
+            Character c1 = new Character("Player 1", 1, 0, 1, 1, 1, 1, 1, 0, false);
             c1.LevelUp(r);
             Assert.IsTrue(c1.level == 2);
             Assert.IsTrue(c1.experience == 0);

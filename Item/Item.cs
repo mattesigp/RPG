@@ -27,11 +27,7 @@ namespace Items
         int plusHealth;
         int plusMana;
         */
-
-        /// <summary>
-        /// Abstract method for getting name
-        /// </summary>
-        /// <returns></returns>
+       
         public abstract string GetName();
         public abstract string GetDescription();
         public abstract char GetItemType();
