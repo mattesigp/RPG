@@ -18,18 +18,21 @@ namespace Character
         public int dexterity { get; private set; }
         public int vitality { get; private set; }
         public int speed { get; private set; }
-        int health;
-        public int mana { get; private set; }
+        public int maxHealth { get; private set; }
+        public int currentHealth { get; private set; }
+        public int maxMana { get; private set; }
+        public int currentMana { get; private set; }
 
         bool isMagicUser;
-        List<Armor> armor;
-        Weapon mainhand;
-        Type offhand;
+        List<Armor> armor = null;
+        Weapon mainhand = null;
+        Type offhand = null;
 
         /// <summary>
-        /// Constructor for character data. Requires any number of parameters from 0 to 8
+        /// Constructor for character data. Requires any number of parameters from 0 to 9
         /// </summary>
-        /// <param name="l">Level of character</param>
+        /// <param name="lvl">Level of character</param>
+        /// <param name="exp">Experience value of character</param>
         /// <param name="str">Strength value of character</param>
         /// <param name="dex">Dexterity value of character</param>
         /// <param name="vit">Vitality value of character</param>
@@ -37,18 +40,21 @@ namespace Character
         /// <param name="h">Health of character</param>
         /// <param name="m">Mana of Character</param>
         /// <param name="mag">Does character use magic or not</param>
-        public Character(int l = 1, int str = 1, int dex = 1, int vit = 1, int spd = 1, int h = 1, int m = 0, bool mag = false)
+        public Character(int lvl = 1, int exp = 0, int str = 1, int dex = 1, int vit = 1, int spd = 1, int h = 1, int m = 0, bool mag = false)
         {
-            level = l;
-            experience = 0;
+            level = lvl;
+            experience = exp;
             strength = str;
             dexterity = dex;
             vitality = vit;
             speed = spd;
-            health = h;
-            mana = m;
+            maxHealth = h;
+            currentHealth = h;
+            maxMana = m;
+            currentMana = m;
             isMagicUser = mag;           
         }
+
 
         /// <summary>
         /// Checks to see if character is currently alive
@@ -56,7 +62,7 @@ namespace Character
         /// <returns>True, if health greater 0. False if health equal to or less than 0</returns>
         public bool IsCharacterAlive()
         {
-            if(health > 0)
+            if(currentHealth > 0)
             {
                 return true;
             }
@@ -71,8 +77,9 @@ namespace Character
         /// Does the calculation for level up (Randomized leveling)
         /// </summary>
         /// <param name="r">Accepts random for testing</param>
+        /// <param name="isHealthGained"> True, to set current health and mana to max at level gain; false, to have no health or mana added</param>
         /// <returns>0, if successful. 1, if fails.</returns>
-        public int LevelUp(Random r)
+        public int LevelUp(Random r, bool isHealthGained = false)
         {
             try
             {
@@ -84,9 +91,16 @@ namespace Character
                 dexterity++;
                 vitality++;
                 speed++;
-                health += 10;
+                maxHealth += 10;              
                 if (isMagicUser)
-                    mana += 10;
+                {
+                    maxMana += 10;                    
+                }
+                if (isHealthGained)
+                {
+                    currentHealth = maxHealth;
+                    currentMana = maxMana;
+                }
             }
             catch (Exception)
             {

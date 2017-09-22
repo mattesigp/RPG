@@ -9,7 +9,8 @@ namespace Items
     public class Weapon : Item
     {
         int minDamage;
-        int maxDamage;            
+        int maxDamage;
+        bool isOnehanded;            
 
         override public string GetName() { return name; }
         override public string GetDescription() { return description; }
