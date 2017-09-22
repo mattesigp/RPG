@@ -2,6 +2,7 @@
 *.suo
 *.user
 *.sln.docstates
+packages
 
 # Build results
 
