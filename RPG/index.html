@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<script src="JavaScript/movements.js">
+</script>
+<html>
+<head>
+    <title>RPG - Web-based role-playing game</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <p id="welcome">Welcome to RPG</p>
+    <form>
+        <input type="button" id="nameButton" value="Enter name" onclick="getPlayerName()">
+    </form>
+
+    <p id="printName"></p>
+    <input type="button" id="left" value="Move Left" onclick="moveLeft()" hidden />
+    <input type="button" id="right" value="Move Right" onclick="moveRight()" hidden />
+    <input type="button" id="up" value="Move Up" onclick="moveUp()" hidden />
+    <input type="button" id="down" value="Move Down" onclick="moveDown()" hidden />
+    <input type="button" id="displayInventory" value="Inventory" onclick="displayInv()" hidden />
+
+</body>
+</html>

@@ -10,10 +10,11 @@ namespace Shop
     [TestClass]
     class ShopUnitTests
     {
+        
         [TestMethod]
-        public void IsArmorShop(char type)
+        public void IsArmorShop()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
