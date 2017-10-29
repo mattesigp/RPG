@@ -1,6 +1,5 @@
 ﻿var charName = "";
 
-
 function getPlayerName() {
     do {
         charName = prompt("What is your character's name?", "");
@@ -19,20 +18,40 @@ function getPlayerName() {
     document.getElementById("displayInventory").hidden = false;
 }
 
-function right() {
+function moveRight() {
 
 }
 
-function left() {
+function moveLeft() {
 
 }
 
-function up() {
+function moveUp() {
 
 }
 
-function down() {
+function moveDown() {
 
+}
+
+function displayInv() {
+    document.getElementById("printName").innerHTML = "hi";
+    document.getElementById("left").hidden = true;
+    document.getElementById("right").hidden = true;
+    document.getElementById("up").hidden = true;
+    document.getElementById("down").hidden = true;
+    document.getElementById("displayInventory").hidden = true;
+    document.getElementById("closeInventory").hidden = false;
+    //display all inventory
+}
+
+function closeInv() {
+    document.getElementById("left").hidden = false;
+    document.getElementById("right").hidden = false;
+    document.getElementById("up").hidden = false;
+    document.getElementById("down").hidden = false;
+    document.getElementById("displayInventory").hidden = false;
+    document.getElementById("closeInventory").hidden = true;
 }
 
 function loadGame() {
